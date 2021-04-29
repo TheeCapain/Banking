@@ -22,7 +22,9 @@ public class ControllerMenu {
             }
             case 3 -> {
                 input.printString("You quit");
-                break;
+            }
+            default -> {
+                input.printString("Enter between 1-3");
             }
         }
     }
