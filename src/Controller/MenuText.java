@@ -1,8 +1,8 @@
 package Controller;
 
 public class MenuText {
-    private String[] menuText = new String[]{"1.", "2.", "3"};
-    private InputController input = new InputController();
+    private final String[] menuText = new String[]{"1. Create user", "2. Login", "3. Quit"};
+    private final InputController input = new InputController();
 
     public void printMenuText() {
         for (int i = 0; i< menuText.length;i++){

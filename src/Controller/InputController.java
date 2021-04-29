@@ -6,7 +6,6 @@ public class InputController {
     private final Scanner scan = new Scanner(System.in);
 
     public int scanInt(){
-            scan.next();
         return scan.nextInt();
 
     }
