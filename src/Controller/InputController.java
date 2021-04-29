@@ -9,6 +9,11 @@ public class InputController {
         return scan.nextInt();
 
     }
+
+    public String scanString(){
+        return scan.nextLine();
+    }
+
     public void printString(String message){
         System.out.println(message);
     }

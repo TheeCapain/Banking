@@ -2,16 +2,17 @@ package CreateUser;
 
 public class CreateAccount {
 
-    public CreateAccount(){
-    }
+  public CreateAccount() {
+  }
 
-    public String createUserName(){
-        return "";
-    }
+  public String createUserName() {
+    return "";
+  }
 
-    public String createPassword(){
+  public String createPassword() {
 
-    }
+    return "";
+  }
 
 
 }
