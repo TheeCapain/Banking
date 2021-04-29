@@ -5,11 +5,8 @@ import java.util.Scanner;
 public class InputController {
     private final Scanner scan = new Scanner(System.in);
 
-    public int scanInt(String errorMessage){
-        while(!scan.hasNext()){
-            printString(errorMessage);
+    public int scanInt(){
             scan.next();
-        }
         return scan.nextInt();
 
     }

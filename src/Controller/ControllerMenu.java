@@ -1,15 +1,16 @@
 package Controller;
 
 public class ControllerMenu {
-    private static InputController input;
 
-    public ControllerMenu(InputController input) {
-        ControllerMenu.input = input;
-    }
+    private int choice;
 
     public static void menu() {
-        int choice = input.scanInt("Wrong");
+        MenuText menuText = new MenuText();
+        InputController input = new InputController();
+        menuText.printMenuText();
 
+
+        int choice = input.scanInt();
         switch (choice) {
             case 1 -> {
                 input.printString("You pressed 1");
