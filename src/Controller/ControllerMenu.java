@@ -1,9 +1,16 @@
 package Controller;
-public class ControllerMenu {
 
-    public static void controller () {
-InputController input = new InputController();
-        switch (input.scanInt("Must enter an int")){
+public class ControllerMenu {
+    private static InputController input;
+
+    public ControllerMenu(InputController input) {
+        ControllerMenu.input = input;
+    }
+
+    public static void menu() {
+        int choice = input.scanInt("Wrong");
+
+        switch (choice) {
             case 1 -> {
                 input.printString("You pressed 1");
             }
@@ -14,13 +21,6 @@ InputController input = new InputController();
             case 3 -> {
                 input.printString("You pressed 3");
                 break;
-            }
-            case 4 -> {
-                input.printString("You pressed 4");
-                break;
-            }
-            case 5 -> {
-                input.printString("You pressed 5");
             }
             case 9 -> {
                 input.printString("You quit");

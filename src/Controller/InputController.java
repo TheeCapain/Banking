@@ -3,15 +3,14 @@ package Controller;
 import java.util.Scanner;
 
 public class InputController {
-    private Scanner scan = new Scanner(System.in);
+    private final Scanner scan = new Scanner(System.in);
 
     public int scanInt(String errorMessage){
         while(!scan.hasNext()){
             printString(errorMessage);
             scan.next();
         }
-        int readInt = scan.nextInt();
-        return readInt;
+        return scan.nextInt();
 
     }
     public void printString(String message){
