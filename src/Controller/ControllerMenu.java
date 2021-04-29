@@ -1,7 +1,5 @@
 package Controller;
 
-import CreateUser.CreateAccount;
-
 public class ControllerMenu {
 
     public static void menu() {
