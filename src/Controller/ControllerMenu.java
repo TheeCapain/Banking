@@ -1,6 +1,6 @@
 package Controller;
 
-import CreateUser.CreateAccount;
+import CreateUser.AccountList;
 
 public class ControllerMenu {
 
@@ -8,7 +8,7 @@ public class ControllerMenu {
     public static void menu() {
         MenuText menuText = new MenuText();
         InputController input = new InputController();
-        CreateAccount createAccount = new CreateAccount();
+        AccountList accountList = new AccountList();
 
         menuText.printMenuText();
 
@@ -16,8 +16,7 @@ public class ControllerMenu {
         int choice = input.scanInt();
         switch (choice) {
             case 1 -> {
-                input.printString("Enter Users");
-                createAccount.createUserName(input.scanString());
+                accountList.addAccount();
                 menu();
             }
             case 2 -> {
@@ -25,6 +24,11 @@ public class ControllerMenu {
                 menu();
             }
             case 3 -> {
+                input.printString("Show all users");
+                accountList.printAccounts();
+                menu();
+            }
+            case 4 ->{
                 input.printString("You quit");
             }
             default -> {
